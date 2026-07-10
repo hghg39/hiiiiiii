@@ -1,0 +1,22 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#faf7f2;--paper:#fffdfa;--text:#433434;--pink:#e8b4b8;--pink2:#d98ea2}
+body{font-family:"Cormorant Garamond",serif;background:radial-gradient(circle at top,#fff,#faf7f2 60%,#f5eee8);color:var(--text)}
+.hidden{display:none}
+#landing{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem}
+h1{font-family:Caveat,cursive;font-size:4rem;margin:1rem 0}.paper h2{font-family:Caveat,cursive;font-size:3rem;text-align:center;margin-bottom:2rem}
+p{font-size:1.4rem}
+.envelope{width:300px;height:190px;position:relative;cursor:pointer;animation:float 5s ease-in-out infinite}
+.back{position:absolute;inset:0;background:linear-gradient(145deg,#efc2cf,#e4a4b6);border-radius:14px;box-shadow:0 25px 50px rgba(0,0,0,.15)}
+.flap{position:absolute;inset:0;background:linear-gradient(#efc2cf,#d98ea2);clip-path:polygon(0 0,100% 0,50% 58%);transform-origin:top;transition:1s;border-radius:14px;z-index:2}
+.letter-peek{position:absolute;left:5%;top:14px;width:90%;height:150px;background:#fff;border-radius:8px;display:flex;justify-content:center;align-items:center;font-size:2rem;transition:1s}
+.envelope.open .flap{transform:rotateX(180deg)}
+.envelope.open .letter-peek{transform:translateY(-120px)}
+#letterPage{display:flex;justify-content:center;padding:4rem 1rem}
+.paper{width:min(900px,92%);background:var(--paper);border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.12);padding:3rem;animation:rise .8s}
+#letterText p{font-size:1.45rem;line-height:1.9;margin-bottom:1.6rem;opacity:0;transform:translateY(20px);transition:.8s}
+#letterText p.show{opacity:1;transform:none}
+.sign{text-align:right;margin-top:3rem;font-size:1.3rem}
+.sign span{font-family:Caveat,cursive;font-size:2rem;color:var(--pink2)}
+@keyframes float{50%{transform:translateY(-8px)}}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@media(max-width:700px){h1{font-size:3rem}.paper{padding:2rem}.paper h2{font-size:2.4rem}#letterText p{font-size:1.2rem}.envelope{width:240px;height:155px}}

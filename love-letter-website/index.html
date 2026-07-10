@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A quiet interactive love letter, handcrafted with HTML, CSS, and JavaScript."
+    />
+    <title>For My Favorite Person</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient-light" aria-hidden="true"></div>
+
+    <main>
+      <section class="landing" aria-labelledby="landing-title">
+        <div class="landing__content">
+          <p class="heart-mark" aria-hidden="true">♡</p>
+          <h1 id="landing-title">For My Favorite Person</h1>
+          <p class="landing__note">I made something for you.</p>
+
+          <button
+            class="envelope-button"
+            type="button"
+            aria-label="Open the letter"
+            aria-controls="letter"
+            aria-expanded="false"
+          >
+            <span class="envelope" aria-hidden="true">
+              <span class="envelope__back"></span>
+              <span class="envelope__paper"></span>
+              <span class="envelope__left-fold"></span>
+              <span class="envelope__right-fold"></span>
+              <span class="envelope__bottom-fold"></span>
+              <span class="envelope__front"></span>
+              <span class="envelope__flap"></span>
+              <span class="envelope__rim"></span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="letter"
+        class="letter-section"
+        aria-labelledby="letter-title"
+        aria-hidden="true"
+      >
+        <article class="letter-paper" tabindex="-1">
+          <header class="letter-header">
+            <p class="letter-kicker">A little note</p>
+            <h2 id="letter-title">To You</h2>
+          </header>
+
+          <div id="letter-content" class="letter-content"></div>
+
+          <footer class="letter-footer" aria-label="Closing note">
+            <span aria-hidden="true">❤️</span>
+            <p>Made with love.</p>
+          </footer>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
